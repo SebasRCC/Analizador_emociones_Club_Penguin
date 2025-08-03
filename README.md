@@ -34,12 +34,16 @@ Bienvenido al proyecto **Analizador de emociones**: una aplicación web que sirv
    
    ![inicio](imgReadme/Escribir.png)
 2. Al presionar "Analizar", el texto se envía al backend Flask.
- 
-4. El backend utiliza un modelo de clasificación de sentimientos entrenado para devolver:
+
+   ![Siguiendo](imgReadme/Escribiendo.png)
+3. El backend utiliza un modelo de clasificación de sentimientos entrenado para devolver:
    - El sentimiento (`POSITIVO`, `NEUTRO`, `NEGATIVO`)
    - El nivel de confianza
-5. El frontend cambia el fondo del panel lateral, anima el modelo 3D y muestra una onomatopeya sobre el pingüino con la reacción.
+4. El frontend cambia el fondo del panel lateral, anima el modelo 3D y muestra una onomatopeya sobre el pingüino con la reacción.
 
+| Pantalla de POSITIVO | Pantalla de NEUTRO | Pantalla de NEGATIVO |
+|--------------------|----------------------|----------------------|
+| ![Positivo](imgReadme/POSITIVO.png) | ![Neutro](imgReadme/normal.png) | ![trsite](imgReadme/trsite.png) |
 ---
 
 
