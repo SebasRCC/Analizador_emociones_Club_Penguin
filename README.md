@@ -31,13 +31,14 @@ Bienvenido al proyecto **Analizador de emociones**: una aplicación web que sirv
 ## ⚙️ Cómo funciona
 
 1. El usuario escribe un texto en español.
+   
    ![inicio](imgReadme/Escribir.png)
 2. Al presionar "Analizar", el texto se envía al backend Flask.
  
-3. El backend utiliza un modelo de clasificación de sentimientos entrenado para devolver:
+4. El backend utiliza un modelo de clasificación de sentimientos entrenado para devolver:
    - El sentimiento (`POSITIVO`, `NEUTRO`, `NEGATIVO`)
    - El nivel de confianza
-4. El frontend cambia el fondo del panel lateral, anima el modelo 3D y muestra una onomatopeya sobre el pingüino con la reacción.
+5. El frontend cambia el fondo del panel lateral, anima el modelo 3D y muestra una onomatopeya sobre el pingüino con la reacción.
 
 ---
 
