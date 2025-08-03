@@ -1,28 +1,82 @@
 body {
   margin: 0;
   overflow: hidden;
-  font-family: sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Panel lateral izquierdo */
+.sidebar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 340px;
+  height: 100%;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  border-left: 8px solid transparent;
+  box-sizing: border-box;
+  z-index: 10;
+  backdrop-filter: blur(6px);
+}
+
+.sidebar h1 {
+  margin-top: 0;
+  font-size: 24px;
+  color: #333;
 }
 
 textarea {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  width: 300px;
-  height: 80px;
+  width: 100%;
+  height: 100px;
+  resize: none;
   font-size: 16px;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  outline: none;
 }
 
 button {
-  position: absolute;
-  top: 100px;
-  left: 10px;
+  margin-top: 10px;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #005fa3;
 }
 
 #resultado {
-  position: absolute;
-  top: 140px;
-  left: 10px;
-  background: white;
-  padding: 5px;
+  margin-top: 15px;
+  padding: 10px;
+  background: #f7f7f7;
+  border-radius: 6px;
+  font-weight: bold;
+  color: #222;
+  border: 1px solid #ddd;
+}
+
+/* Estilo para la animación flotante */
+.onomatopeya {
+  animation: floatUpFade 1s ease-out forwards;
+}
+
+@keyframes floatUpFade {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) translateY(0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) translateY(-30px);
+  }
 }

@@ -113,13 +113,12 @@ function animate() {
     }
   }
 
-  // Animación de sentimiento si activa
-  handleEmotionRotation(delta);
+
   //onomatopeya 
     if (model && onomatopeyaSpan) {
     const vector = new THREE.Vector3();
     model.getWorldPosition(vector);
-    vector.y += 2.5; // un poco encima del modelo
+    vector.y += 5.5; // un poco encima del modelo
 
     vector.project(camera);
 
@@ -135,21 +134,6 @@ function animate() {
 }
 
 
-function handleEmotionRotation(delta) {
-  if (rotating && model) {
-    rotationProgress += delta * 2;
-
-    if (rotationProgress < 1) {
-      model.rotation.y = THREE.MathUtils.lerp(startRotationY, targetRotationY, rotationProgress);
-    } else if (rotationProgress < 2) {
-      model.rotation.y = THREE.MathUtils.lerp(targetRotationY, 0, rotationProgress - 1);
-    } else {
-      model.rotation.y = 0;
-      rotating = false;
-      rotationProgress = 0;
-    }
-  }
-}
 
 async function enviarTexto() {
   const texto = document.getElementById("inputTexto").value;
@@ -168,16 +152,12 @@ function mostrarResultado(data) {
   const resultado = document.getElementById("resultado");
   resultado.textContent = `${data.sentimiento} (${(data.confianza * 100).toFixed(2)}%)`;
 
-  document.body.style.backgroundColor = backgroundColors[data.sentimiento];
+  // Cambia el borde lateral de la barra izquierda
+  const sidebar = document.querySelector('.sidebar');
+  sidebar.style.borderLeftColor = backgroundColors[data.sentimiento];
+    // Onomatopeya
   mostrarOnomatopeya(onomatopeyas[data.sentimiento]);
 
-  if (model && !rotating) {
-    if (data.sentimiento === "POSITIVO") {
-      iniciarRotacion(Math.PI / 8);
-    } else if (data.sentimiento === "NEGATIVO") {
-      iniciarRotacion(-Math.PI / 8);
-    }
-  }
 }
 
 function iniciarRotacion(grados) {
