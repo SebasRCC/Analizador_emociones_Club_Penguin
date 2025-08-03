@@ -12,7 +12,9 @@ body {
   width: 340px;
   height: 100%;
   padding: 20px;
-  background: rgba(255, 255, 255, 0.85);
+
+  background: #ffffff; /* solo como valor inicial, será sobrescrito por JS */
+
   box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
   border-left: 8px solid transparent;
   box-sizing: border-box;

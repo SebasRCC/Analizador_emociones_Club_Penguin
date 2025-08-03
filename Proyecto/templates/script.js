@@ -10,10 +10,11 @@ let onomatopeyaSpan = null;
 let onomatopeyaTimer = null;
 
 const backgroundColors = {
-  POSITIVO: "#d4f8e8",
-  NEUTRO: "#f0f0f0",
-  NEGATIVO: "#f8d4d4"
+  POSITIVO: "rgba(212, 248, 232, 0.85)",
+  NEUTRO: "rgba(240, 240, 240, 0.85)",
+  NEGATIVO: "rgba(248, 212, 212, 0.85)"
 };
+
 const onomatopeyas = {
   POSITIVO: "¡Genial!",
   NEUTRO: "Hmm...",
@@ -39,8 +40,8 @@ function init() {
   light.position.set(0, 1, 0);
   scene.add(light);
 
-  const axesHelper = new THREE.AxesHelper(5);
-  scene.add(axesHelper);
+  //const axesHelper = new THREE.AxesHelper(5);
+  //scene.add(axesHelper);
 
   // Cargar modelo
   const loader = new THREE.GLTFLoader();
@@ -154,7 +155,8 @@ function mostrarResultado(data) {
 
   // Cambia el borde lateral de la barra izquierda
   const sidebar = document.querySelector('.sidebar');
-  sidebar.style.borderLeftColor = backgroundColors[data.sentimiento];
+  sidebar.style.backgroundColor = backgroundColors[data.sentimiento];
+
     // Onomatopeya
   mostrarOnomatopeya(onomatopeyas[data.sentimiento]);
 
