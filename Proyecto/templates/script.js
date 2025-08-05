@@ -97,7 +97,7 @@ function animate() {
 
     if (distance > 0.05) {
       dir.normalize();
-      model.position.addScaledVector(dir, delta * 5); // velocidad de movimiento
+      model.position.addScaledVector(dir, delta * 10); // velocidad de movimiento
 
       // Gira hacia la dirección de movimiento
       const angle = Math.atan2(dir.x, dir.z);
