@@ -1,9 +1,11 @@
-# 🐧 Analizador de emociones.
+# 🐧 Analizador de emociones
 
-Bienvenido al proyecto **Analizador de emociones**: una aplicación web que sirve para analizar texto y a partir de este determinar el estado de animo del usuario. 
+Bienvenido al proyecto **Analizador de emociones**: una aplicación web que sirve para analizar texto y a partir de este determinar el estado de animo del usuario.
+
 ---
 
 ## 🌟 ¿Qué hace este proyecto?
+
 - Analiza sentimientos usando un modelo de lenguaje entrenado en español (`beto-sentiment-analysis`).
 - Muestra un pingüino 3D (`.glb`) que reacciona a los sentimientos.
 - Cambia el color del panel lateral según la emoción detectada.
@@ -15,12 +17,14 @@ Bienvenido al proyecto **Analizador de emociones**: una aplicación web que sirv
 ## 🧠 Tecnologías usadas
 
 ### Backend
+
 - Python 3
 - Flask
 - HuggingFace Transformers (`beto-sentiment-analysis`)
 - Torch (PyTorch)
 
 ### Frontend
+
 - HTML5 + CSS3
 - JavaScript
 - [Three.js](https://threejs.org/) (para visualización 3D)
@@ -31,7 +35,7 @@ Bienvenido al proyecto **Analizador de emociones**: una aplicación web que sirv
 ## ⚙️ Cómo funciona
 
 1. El usuario escribe un texto en español.
-   
+
    ![inicio](imgReadme/Escribir.png)
 2. Al presionar "Analizar", el texto se envía al backend Flask.
 
@@ -44,8 +48,8 @@ Bienvenido al proyecto **Analizador de emociones**: una aplicación web que sirv
 | Pantalla de POSITIVO | Pantalla de NEUTRO | Pantalla de NEGATIVO |
 |--------------------|----------------------|----------------------|
 | ![Positivo](imgReadme/POSITIVO.png) | ![Neutro](imgReadme/normal.png) | ![trsite](imgReadme/trsite.png) |
----
 
+---
 
 ## 🏫 Hecho para la Escuela Politécnica Nacional
 
@@ -57,7 +61,7 @@ Bienvenido al proyecto **Analizador de emociones**: una aplicación web que sirv
 
 Sebas Ramos – [GitHub](https://github.com/tu-usuario)
 Juan Mateo Quisilema - [GitHub](https://github.com/JuanMateoQ)
-
+Jhair Zambrano - [GitHub](https://github.com/Jhairzp27)
 
 ---
 
@@ -65,4 +69,3 @@ Juan Mateo Quisilema - [GitHub](https://github.com/JuanMateoQ)
 
 Este proyecto está bajo la licencia MIT.  
 Puedes usarlo, modificarlo y distribuirlo libremente con atribución.
-
