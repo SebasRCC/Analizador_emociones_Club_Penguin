@@ -2,8 +2,9 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>Emotion World</title>
+  <title>Pengui Motion</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐧</text></svg>">
 </head>
 <body>
   <div class="sidebar">
@@ -12,6 +13,16 @@
     <button onclick="enviarTexto()">Analizar</button>
     <p id="resultado">Esperando análisis...</p>
   </div>
+
+  <div id="supportModal" class="modal-overlay hidden">
+  <div class="modal-content">
+    <h2>Un Mensaje Importante</h2>
+    <p>Leer palabras como las que escribiste nos preocupa. Recuerda que no estás solo y que hay personas que quieren ayudarte.</p>
+    <p>Hablar con un profesional puede hacer una gran diferencia. Por favor, considera buscar apoyo.</p>
+    <p class="heart">❤️</p>
+    <button id="closeModalBtn">Entendido</button>
+  </div>
+</div>
 
   <!-- Three.js (versión UMD clásica que incluye GLTFLoader funcional) -->
   <script src="https://unpkg.com/three@0.128.0/build/three.min.js"></script>

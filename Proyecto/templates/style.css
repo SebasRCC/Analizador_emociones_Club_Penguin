@@ -12,14 +12,18 @@ body {
   width: 340px;
   height: 100%;
   padding: 20px;
-
-  background: #ffffff; /* solo como valor inicial, será sobrescrito por JS */
-
+  background: rgba(255, 255, 255, 0.85);
   box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
   border-left: 8px solid transparent;
   box-sizing: border-box;
   z-index: 10;
   backdrop-filter: blur(6px);
+  transition: background-color 0.5s ease, border-left-color 0.5s ease;
+
+  /* MEJORA: Centrar todo el contenido verticalmente */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .sidebar h1 {
@@ -57,6 +61,11 @@ button:hover {
   background-color: #005fa3;
 }
 
+button:disabled {
+    background-color: #999;
+    cursor: not-allowed;
+}
+
 #resultado {
   margin-top: 15px;
   padding: 10px;
@@ -65,6 +74,79 @@ button:hover {
   font-weight: bold;
   color: #222;
   border: 1px solid #ddd;
+  transition: all 0.4s ease-in-out;
+  max-height: 100px;
+  overflow: hidden;
+}
+
+#resultado.hidden {
+    opacity: 0;
+    max-height: 0;
+    margin-top: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-width: 0;
+}
+
+/* --- ESTILOS PARA LA VENTANA MODAL DE APOYO --- */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.modal-overlay.hidden {
+  opacity: 0;
+  pointer-events: none; /* Evita clicks cuando está oculta */
+}
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+  width: 90%;
+  max-width: 450px;
+  text-align: center;
+  transform: scale(1);
+  transition: transform 0.3s ease;
+}
+
+.modal-overlay.hidden .modal-content {
+    transform: scale(0.9);
+}
+
+.modal-content h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+.modal-content p {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.modal-content .heart {
+    font-size: 2em;
+    color: #e74c3c;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#closeModalBtn {
+  width: auto; /* Ancho automático basado en el contenido */
+  padding: 10px 25px;
 }
 
 /* Estilo para la animación flotante */
